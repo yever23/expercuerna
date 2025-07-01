@@ -14,15 +14,21 @@ body {
     padding: 0;
     background-color: var(--color-primary-blue); /* Fondo azul profundo */
     color: var(--color-text-light); /* Texto principal blanco */
-    line-height: 1.6;
+    line-height: 1.6; /* Aumentar la altura de línea para mejor legibilidad */
 }
 
 /* Contenedor principal para el contenido */
 .container {
     max-width: 960px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px; /* Padding actual, se ve bien */
     text-align: center; /* Centrar el texto principal */
+}
+
+/* Estilos para secciones */
+section {
+    padding: 40px 0; /* Más espacio vertical entre secciones */
+    margin-bottom: 30px; /* Espacio extra entre cada sección */
 }
 
 /* Estilos para títulos */
@@ -33,16 +39,26 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
-    color: var(--color-text-light); /* También puedes probar con var(--color-action-orange); */
-    margin-top: 30px;
+    font-size: 2.2em; /* Ligeramente más grande */
+    color: var(--color-text-light);
+    margin-top: 50px; /* Más espacio arriba de los títulos de sección */
+    margin-bottom: 30px; /* Más espacio abajo de los títulos de sección */
 }
+
+h3 {
+    font-size: 1.6em; /* Títulos de subtítulos (como las misiones) */
+    color: var(--color-text-light);
+    margin-top: 40px; /* Espacio arriba de subtítulos */
+    margin-bottom: 15px; /* Espacio abajo de subtítulos */
+}
+
 
 /* Estilos para párrafos */
 p {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Ligeramente más grande para mejor lectura */
     color: var(--color-text-light);
-    margin-bottom: 20px;
+    margin-bottom: 1.2em; /* Más espacio entre párrafos */
+    padding: 0 10px; /* Pequeño padding lateral para que el texto no toque los bordes en móvil */
 }
 
 /* Estilos para los botones (llamadas a la acción) */
@@ -56,6 +72,8 @@ p {
     font-size: 1.1em;
     font-weight: bold;
     transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+    margin-top: 20px; /* Espacio arriba del botón */
+    margin-bottom: 20px; /* Espacio abajo del botón */
 }
 
 .button:hover {
@@ -72,10 +90,60 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Estilos específicos para ítems de misión o pasos */
+.mission-item, .step-item {
+    background-color: rgba(255, 255, 255, 0.05); /* Un fondo muy sutil para agrupar */
+    padding: 30px 20px; /* Más padding interno */
+    margin-bottom: 30px; /* Más espacio entre cada misión/paso */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la cuadrícula de pasos (Cómo Funciona) */
+.steps-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente línea */
+    justify-content: center;
+    gap: 30px; /* Espacio entre los elementos de la cuadrícula */
+    margin-top: 40px;
+}
+
+.step-item {
+    flex: 1; /* Permite que los elementos se expandan */
+    min-width: 280px; /* Ancho mínimo antes de que se envuelvan */
+    max-width: 30%; /* Ancho máximo en pantallas grandes */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto */
+    background-color: rgba(255, 255, 255, 0.08); /* Un poco más oscuro que el item individual */
+    padding: 25px;
+}
+
+.step-item h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: var(--color-action-orange); /* Los títulos de los pasos en naranja */
+}
+
+.step-item p {
+    font-size: 1em;
+    margin-bottom: 0;
+    padding: 0; /* Quitar padding lateral para este párrafo */
+}
+
+
 /* Pequeñas adaptaciones para móviles (diseño responsivo básico) */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 1.3em;
+        margin-top: 25px;
+        margin-bottom: 10px;
     }
     p {
         font-size: 1em;
@@ -84,61 +152,15 @@ a:hover {
         padding: 12px 25px;
         font-size: 1em;
     }
-}
-
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.mission-card h4 {
-    margin: 20px 20px 10px;
-    font-size: 1.4rem;
-    color: #FF6B6B;
-}
-
-.mission-card p {
-    padding: 0 20px 20px;
-    margin: 0;
-    color: #777;
-}
-
-/* Pie de página */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-}
-
-footer .social-links a {
-    color: #ecf0f1;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-footer .social-links a:hover {
-    color: #FF6B6B;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .steps-container, .mission-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .step, .mission-card {
+    section {
+        padding: 30px 0;
         margin-bottom: 20px;
+    }
+    .steps-grid {
+        flex-direction: column; /* Apilar los pasos en móvil */
+        gap: 20px;
+    }
+    .step-item {
+        max-width: 100%; /* Ocupar todo el ancho en móvil */
     }
 }
