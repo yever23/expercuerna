@@ -234,6 +234,40 @@ a:hover {
     transform: scale(1.05); /* Efecto de zoom ligero al pasar el mouse */
 }
 
+/* Estilos para la sección de TESTIMONIOS */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.testimonial-item {
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo ligeramente más claro */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Para el efecto de comillas */
+}
+
+.testimonial-item p {
+    font-style: italic; /* Las comillas serán en cursiva */
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    padding: 0; /* Asegurarse de que no tenga padding lateral del p general */
+}
+
+.testimonial-item p.author {
+    font-weight: bold;
+    font-style: normal;
+    color: var(--color-action-orange); /* Nombre del autor en naranja */
+    font-size: 0.95em;
+    margin-top: 10px;
+}
+
 /* Estilos para el PIE DE PÁGINA (FOOTER) */
 .footer {
     background-color: #12203F; /* Un tono ligeramente más oscuro de azul para el footer */
@@ -385,6 +419,12 @@ a:hover {
     }
     .gallery-item img {
         height: 200px; /* Altura un poco menor en móvil */
+    }
+
+    /* Ajustes responsivos para la sección de testimonios */
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        padding: 0 20px; /* Más padding lateral */
     }
 
     /* Ajustes responsivos para el footer */
