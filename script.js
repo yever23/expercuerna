@@ -1,22 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Aquí puedes añadir código JavaScript para futuras interacciones, como:
-    // - Un formulario de registro
-    // - Un mapa interactivo
-    // - Animaciones
-    // Por ahora, la página es estática y el código es opcional.
-    console.log("¡La página de 'El Pasaporte Cuernavaca' está lista!");
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    // Ejemplo de una futura función:
-    const ctaButton = document.querySelector('.cta-button');
+    // Muestra u oculta el botón basado en el scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Muestra el botón si el usuario se desplaza más de 300px
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
 
-    ctaButton.addEventListener('click', function(event) {
-        // Prevenir el comportamiento por defecto del enlace
-        event.preventDefault();
-
-        // Puedes añadir aquí una acción, como mostrar un pop-up o redireccionar a una tienda de apps
-        alert('¡Pronto podrás descargar la app de El Pasaporte Cuernavaca!');
-
-        // Si tienes un enlace de descarga, puedes redirigir aquí:
-        // window.location.href = 'https://link-a-tu-app.com'; 
+    // Desplaza la página suavemente hacia arriba al hacer clic
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Desplazamiento suave
+        });
     });
 });
