@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="navbar">
-        <div class="container nav-container">
+        <div class="container nav-container" data-aos="fade-down">
             <a href="#top" class="brand">El Pasaporte Cuernavaca</a>
             <ul class="nav-links">
                 <li><a href="#top">Inicio</a></li>
@@ -25,91 +26,91 @@
         </div>
     </nav>
     <div class="container">
-        <header id="top">
+        <header id="top" data-aos="fade-up">
             <h1>Convierte tu visita a Cuernavaca en una aventura inolvidable</h1>
             <p>Completa misiones en lugares secretos, gana recompensas locales y colecciona tu mapa de aventuras.</p>
-            <a href="#misiones" class="button">¡Empieza tu Aventura!</a>
+            <a href="#misiones" class="button" data-aos="zoom-in" data-aos-delay="500">¡Empieza tu Aventura!</a>
         </header>
 
-        <section id="acerca-de">
+        <section id="acerca-de" data-aos="fade-up">
             <h2>Descubre la Cuernavaca Secreta</h2>
             <p>Somos tu pasaporte a experiencias únicas. Te guiamos por rincones emblemáticos y tesoros escondidos de la "Ciudad de la Eterna Primavera". Cada misión es una oportunidad para conectar con la cultura, la historia y la belleza de Cuernavaca de una forma divertida y diferente.</p>
             <p>Ideal para aventureros, familias y curiosos que buscan algo más allá del turismo tradicional. ¡Prepárate para coleccionar sellos en tu pasaporte y desbloquear sorpresas!</p>
         </section>
 
-        <section id="misiones">
+        <section id="misiones" data-aos="fade-up">
             <h2>Nuestras Misiones Te Esperan</h2>
             <p>Elige tu camino y sumérgete en desafíos que te llevarán a explorar: desde descifrar enigmas históricos hasta encontrar obras de arte callejero. Cada misión tiene un objetivo claro y una recompensa esperándote.</p>
-            <div class="mission-item">
+            <div class="mission-item" data-aos="zoom-in">
                 <h3>La Leyenda del Jardín</h3>
                 <p>Desvela los misterios ocultos en los jardines históricos de la ciudad. Una aventura llena de belleza y secretos antiguos.</p>
                 <a href="#contacto" class="button">¡Explora el Jardín!</a>
             </div>
-            <div class="mission-item">
+            <div class="mission-item" data-aos="zoom-in" data-aos-delay="200">
                 <h3>Sabor Escondido</h3>
                 <p>Un recorrido por los sabores auténticos de Cuernavaca. Encuentra los puestos más emblemáticos y degusta la gastronomía local.</p>
                 <a href="#contacto" class="button">¡Saboréala!</a>
             </div>
             </section>
 
-        <section id="como-funciona">
+        <section id="como-funciona" data-aos="fade-up">
             <h2>Así Funciona Tu Aventura</h2>
             <div class="steps-grid">
-                <div class="step-item">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="100">
                     <h3>1. Elige tu Misión</h3>
                     <p>Selecciona la aventura que más te apasione desde nuestra plataforma.</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="200">
                     <h3>2. Descubre y Resuelve</h3>
                     <p>Sigue las pistas, visita los puntos clave y completa los desafíos en cada ubicación.</p>
                 </div>
-                <div class="step-item">
+                <div class="step-item" data-aos="fade-up" data-aos-delay="300">
                     <h3>3. Gana Recompensas</h3>
                     <p>Al completar tu misión, obtén sellos para tu pasaporte y desbloquea beneficios exclusivos.</p>
                 </div>
             </div>
         </section>
 
-        <section id="galeria">
+        <section id="galeria" data-aos="fade-up">
             <h2>Captura Tu Aventura</h2>
             <p>Inspírate con las fotos de otros aventureros y comparte tus propios momentos memorables.</p>
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="50">
                     <img src="https://picsum.photos/id/1018/400/300" alt="Aventura en Cuernavaca 1">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
                     <img src="https://picsum.photos/id/1015/400/300" alt="Aventura en Cuernavaca 2">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
                     <img src="https://picsum.photos/id/1020/400/300" alt="Aventura en Cuernavaca 3">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
                     <img src="https://picsum.photos/id/1025/400/300" alt="Aventura en Cuernavaca 4">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
                     <img src="https://picsum.photos/id/1033/400/300" alt="Aventura en Cuernavaca 5">
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="550">
                     <img src="https://picsum.photos/id/1039/400/300" alt="Aventura en Cuernavaca 6">
                 </div>
             </div>
-            <a href="#contacto" class="button">¡Comparte la Tuya!</a>
+            <a href="#contacto" class="button" data-aos="zoom-in" data-aos-delay="700">¡Comparte la Tuya!</a>
         </section>
 
-        <section id="contacto">
+        <section id="contacto" data-aos="fade-up">
             <h2>¡Tu Aventura Comienza Aquí!</h2>
             <p>¿Listo para desbloquear los secretos de Cuernavaca? Contáctanos para adquirir tu Pasaporte y empezar tu exploración.</p>
-            <a href="mailto:info@elpasaportecuernavaca.com" class="button">¡Quiero Mi Pasaporte!</a>
+            <a href="mailto:info@elpasaportecuernavaca.com" class="button" data-aos="zoom-in" data-aos-delay="200">¡Quiero Mi Pasaporte!</a>
             <p>También puedes seguirnos en nuestras redes:</p>
-            <div class="social-icons">
+            <div class="social-icons" data-aos="fade-up" data-aos-delay="400">
                 <a href="https://www.facebook.com/TuPaginaDeFacebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/TuPerfilDeInstagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
         </section>
-    </div> <footer class="footer">
+    </div> <footer class="footer" data-aos="fade-up">
         <div class="container footer-content">
-            <div class="footer-section brand-info">
+            <div class="footer-section brand-info" data-aos="fade-right">
                 <h3>El Pasaporte Cuernavaca</h3>
                 <p>Tu guía para una aventura inolvidable en la Ciudad de la Eterna Primavera.</p>
                 <div class="social-icons footer-social-icons">
@@ -118,7 +119,7 @@
                     <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="footer-section quick-links">
+            <div class="footer-section quick-links" data-aos="fade-up">
                 <h3>Navegación Rápida</h3>
                 <ul>
                     <li><a href="#top">Inicio</a></li>
@@ -128,7 +129,7 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            <div class="footer-section contact-info">
+            <div class="footer-section contact-info" data-aos="fade-left">
                 <h3>Contáctanos</h3>
                 <p>Email: <a href="mailto:info@elpasaportecuernavaca.com">info@elpasaportecuernavaca.com</a></p>
                 <p>Teléfono: <a href="tel:+521234567890">+(52) 123 456 7890</a></p>
@@ -140,5 +141,13 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            // Configuración opcional global de AOS
+            duration: 1000, // duración de las animaciones en ms
+            once: true,    // Si las animaciones deben ocurrir solo una vez al desplazarse hacia abajo
+        });
+    </script>
 </body>
 </html>
