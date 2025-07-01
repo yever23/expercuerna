@@ -57,6 +57,17 @@
     color: var(--color-action-orange); /* Cambia a naranja al pasar el mouse */
 }
 
+/* Estilos para el botón del menú hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: var(--color-text-light);
+    cursor: pointer;
+    padding: 0;
+}
+
 /* Estilos Generales */
 body {
     font-family: 'Open Sans', sans-serif; /* FUENTE PRINCIPAL DE TEXTO */
@@ -326,8 +337,47 @@ a:hover {
     transform: translateY(-3px); /* Pequeño efecto de "salto" */
 }
 
-/* Ajustes responsivos generales */
+/* Ajustes responsivos */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón de la hamburguesa en móvil */
+    }
+
+    .nav-links {
+        display: none; /* Ocultar los enlaces por defecto en móvil */
+        flex-direction: column; /* Apilar enlaces */
+        width: 100%;
+        background-color: var(--color-primary-blue); /* Fondo para el menú abierto */
+        position: absolute; /* Posicionar el menú desplegable */
+        top: 75px; /* Debajo de la barra de navegación */
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar los enlaces cuando el menú está activo */
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+
+    .nav-container {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+        justify-content: space-between; /* Espacio entre logo y hamburguesa */
+    }
+
+    body {
+        padding-top: 75px; /* Ajuste para la altura de la barra de navegación */
+    }
+
     h1 {
         font-size: 2.5em;
     }
@@ -352,29 +402,6 @@ a:hover {
     section {
         padding: 30px 0;
         margin-bottom: 20px;
-    }
-
-    /* Ajustes responsivos para la barra de navegación */
-    .nav-container {
-        flex-direction: column; /* Apilar logo y enlaces en móvil */
-        text-align: center;
-    }
-    .nav-links {
-        margin-top: 15px;
-        flex-direction: column; /* Apilar enlaces en móvil */
-        gap: 10px; /* Menos espacio entre enlaces en móvil */
-        width: 100%;
-    }
-    .navbar .brand {
-        font-size: 1.5em;
-    }
-    .nav-links li a {
-        font-size: 1em;
-        display: block; /* Ocupar todo el ancho disponible */
-        padding: 10px 0;
-    }
-    body {
-        padding-top: 150px; /* Más padding para el body en móvil si el menú apilado es más alto */
     }
 
     /* Ajustes responsivos para la cuadrícula de pasos */
