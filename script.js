@@ -1,20 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    // Muestra u oculta el botón basado en el scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) { // Muestra el botón si el usuario se desplaza más de 300px
-            scrollToTopBtn.style.display = 'block';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
-
-    // Desplaza la página suavemente hacia arriba al hacer clic
-    scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Desplazamiento suave
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
         });
-    });
+
+        // Cerrar el menú si se hace clic en un enlace (para navegación interna)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 });
