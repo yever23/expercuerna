@@ -164,4 +164,43 @@ a:hover {
         max-width: 100%; /* Ocupar todo el ancho en móvil */
     }
 }
+/* Estilos para la cuadrícula de la galería */
+.gallery-grid {
+    display: grid; /* Usar CSS Grid para la cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 10px; /* Pequeño padding lateral para que no pegue a los bordes */
+}
+
+.gallery-item {
+    overflow: hidden; /* Para asegurar que las imágenes no se salgan del contenedor */
+    border-radius: 8px; /* Bordes redondeados para un toque suave */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%; /* Las imágenes ocupan el ancho completo de su contenedor */
+    height: 250px; /* Altura fija para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Recorta la imagen para que cubra el espacio sin distorsionarse */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    transition: transform 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Efecto de zoom ligero al pasar el mouse */
+}
+
+/* Ajustes responsivos para la galería */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        padding: 0 20px; /* Más padding lateral en móvil */
+    }
+    .gallery-item img {
+        height: 200px; /* Altura un poco menor en móvil */
+    }
+}
 
