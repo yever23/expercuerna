@@ -1,4 +1,81 @@
 /* Variables de color para fácil referencia y consistencia */
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: var(--color-primary-blue); /* Color de fondo de la barra */
+    padding: 15px 0;
+    position: fixed; /* Hace que la barra se quede fija */
+    width: 100%; /* Ocupa todo el ancho */
+    top: 0; /* Se pega a la parte superior */
+    left: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Una pequeña sombra para que destaque */
+}
+
+.nav-container {
+    display: flex; /* Para alinear elementos en una fila */
+    justify-content: space-between; /* Espacio entre el logo y los enlaces */
+    align-items: center; /* Centrar verticalmente */
+    padding: 0 20px; /* Padding para los lados */
+}
+
+.navbar .brand {
+    color: var(--color-text-light); /* Color del texto del logo */
+    font-size: 1.8em; /* Tamaño del logo */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none; /* Quitar viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para poner los enlaces en fila */
+    gap: 25px; /* Espacio entre cada enlace */
+}
+
+.nav-links li a {
+    color: var(--color-text-light); /* Color de los enlaces */
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.nav-links li a:hover {
+    color: var(--color-action-orange); /* Cambia a naranja al pasar el mouse */
+}
+
+/* Ajuste para el cuerpo de la página para que el contenido no quede debajo de la barra fija */
+body {
+    padding-top: 80px; /* Ajusta este valor si la barra de navegación es más alta */
+    /* ... el resto de estilos del body que ya tienes ... */
+}
+
+/* Ajustes responsivos para la barra de navegación */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Apilar logo y enlaces en móvil */
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column; /* Apilar enlaces en móvil */
+        gap: 10px; /* Menos espacio entre enlaces en móvil */
+        width: 100%;
+    }
+    .navbar .brand {
+        font-size: 1.5em;
+    }
+    .nav-links li a {
+        font-size: 1em;
+        display: block; /* Ocupar todo el ancho disponible */
+        padding: 10px 0;
+    }
+    body {
+        padding-top: 150px; /* Más padding para el body en móvil si el menú apilado es más alto */
+    }
+}
+
 :root {
     --color-primary-blue: #1A2C5B; /* Azul Índigo Profundo - Base */
     --color-action-orange: #FF6B35; /* Naranja Vibrante - Acción */
