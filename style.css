@@ -1,4 +1,12 @@
 /* Variables de color para fácil referencia y consistencia */
+:root {
+    --color-primary-blue: #1A2C5B; /* Azul Índigo Profundo - Base */
+    --color-action-orange: #FF6B35; /* Naranja Vibrante - Acción */
+    --color-secondary-green: #4CAF50; /* Verde Esmeralda - Toque fresco */
+    --color-text-light: #FFFFFF; /* Blanco - Texto principal */
+    --color-text-dark: #333333; /* Gris oscuro - Para texto sobre fondos claros si aplica */
+}
+
 /* Estilos para la barra de navegación */
 .navbar {
     background-color: var(--color-primary-blue); /* Color de fondo de la barra */
@@ -15,6 +23,8 @@
     display: flex; /* Para alinear elementos en una fila */
     justify-content: space-between; /* Espacio entre el logo y los enlaces */
     align-items: center; /* Centrar verticalmente */
+    max-width: 960px; /* Limita el ancho como el container principal */
+    margin: 0 auto; /* Centra el nav-container */
     padding: 0 20px; /* Padding para los lados */
 }
 
@@ -45,50 +55,12 @@
     color: var(--color-action-orange); /* Cambia a naranja al pasar el mouse */
 }
 
-/* Ajuste para el cuerpo de la página para que el contenido no quede debajo de la barra fija */
-body {
-    padding-top: 80px; /* Ajusta este valor si la barra de navegación es más alta */
-    /* ... el resto de estilos del body que ya tienes ... */
-}
-
-/* Ajustes responsivos para la barra de navegación */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column; /* Apilar logo y enlaces en móvil */
-        text-align: center;
-    }
-    .nav-links {
-        margin-top: 15px;
-        flex-direction: column; /* Apilar enlaces en móvil */
-        gap: 10px; /* Menos espacio entre enlaces en móvil */
-        width: 100%;
-    }
-    .navbar .brand {
-        font-size: 1.5em;
-    }
-    .nav-links li a {
-        font-size: 1em;
-        display: block; /* Ocupar todo el ancho disponible */
-        padding: 10px 0;
-    }
-    body {
-        padding-top: 150px; /* Más padding para el body en móvil si el menú apilado es más alto */
-    }
-}
-
-:root {
-    --color-primary-blue: #1A2C5B; /* Azul Índigo Profundo - Base */
-    --color-action-orange: #FF6B35; /* Naranja Vibrante - Acción */
-    --color-secondary-green: #4CAF50; /* Verde Esmeralda - Toque fresco */
-    --color-text-light: #FFFFFF; /* Blanco - Texto principal */
-    --color-text-dark: #333333; /* Gris oscuro - Para texto sobre fondos claros si aplica */
-}
-
 /* Estilos Generales */
 body {
     font-family: Arial, sans-serif; /* Puedes cambiar esta fuente después */
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Ajuste para que el contenido no quede debajo de la barra fija */
     background-color: var(--color-primary-blue); /* Fondo azul profundo */
     color: var(--color-text-light); /* Texto principal blanco */
     line-height: 1.6; /* Aumentar la altura de línea para mejor legibilidad */
@@ -206,41 +178,26 @@ a:hover {
     padding: 0; /* Quitar padding lateral para este párrafo */
 }
 
-
-/* Pequeñas adaptaciones para móviles (diseño responsivo básico) */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5em;
-    }
-    h2 {
-        font-size: 1.8em;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-    h3 {
-        font-size: 1.3em;
-        margin-top: 25px;
-        margin-bottom: 10px;
-    }
-    p {
-        font-size: 1em;
-    }
-    .button {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-    section {
-        padding: 30px 0;
-        margin-bottom: 20px;
-    }
-    .steps-grid {
-        flex-direction: column; /* Apilar los pasos en móvil */
-        gap: 20px;
-    }
-    .step-item {
-        max-width: 100%; /* Ocupar todo el ancho en móvil */
-    }
+/* Estilos para los iconos de redes sociales */
+.social-icons {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex; /* Para poner los iconos en fila */
+    justify-content: center; /* Centrar los iconos */
+    gap: 25px; /* Espacio entre cada icono */
 }
+
+.social-icons a {
+    color: var(--color-text-light); /* Color blanco para los iconos */
+    font-size: 2.2em; /* Tamaño grande para que se vean bien */
+    transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
+    text-decoration: none; /* Asegura que no tengan subrayado */
+}
+
+.social-icons a:hover {
+    color: var(--color-action-orange); /* Cambia a naranja al pasar el mouse */
+}
+
 /* Estilos para la cuadrícula de la galería */
 .gallery-grid {
     display: grid; /* Usar CSS Grid para la cuadrícula */
@@ -270,8 +227,69 @@ a:hover {
     transform: scale(1.05); /* Efecto de zoom ligero al pasar el mouse */
 }
 
-/* Ajustes responsivos para la galería */
+
+/* Ajustes responsivos generales */
 @media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 1.3em;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1em;
+        padding: 0 20px; /* Más padding lateral en móvil para párrafos */
+    }
+    .button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    section {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes responsivos para la barra de navegación */
+    .nav-container {
+        flex-direction: column; /* Apilar logo y enlaces en móvil */
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-direction: column; /* Apilar enlaces en móvil */
+        gap: 10px; /* Menos espacio entre enlaces en móvil */
+        width: 100%;
+    }
+    .navbar .brand {
+        font-size: 1.5em;
+    }
+    .nav-links li a {
+        font-size: 1em;
+        display: block; /* Ocupar todo el ancho disponible */
+        padding: 10px 0;
+    }
+    body {
+        padding-top: 150px; /* Más padding para el body en móvil si el menú apilado es más alto */
+    }
+
+    /* Ajustes responsivos para la cuadrícula de pasos */
+    .steps-grid {
+        flex-direction: column; /* Apilar los pasos en móvil */
+        gap: 20px;
+    }
+    .step-item {
+        max-width: 100%; /* Ocupar todo el ancho en móvil */
+        padding: 20px;
+    }
+
+    /* Ajustes responsivos para la galería */
     .gallery-grid {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
         padding: 0 20px; /* Más padding lateral en móvil */
@@ -280,4 +298,3 @@ a:hover {
         height: 200px; /* Altura un poco menor en móvil */
     }
 }
-
