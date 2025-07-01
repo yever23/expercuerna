@@ -30,6 +30,7 @@
 
 .navbar .brand {
     color: var(--color-text-light); /* Color del texto del logo */
+    font-family: 'Montserrat', sans-serif; /* Aplicar Montserrat para el logo/marca */
     font-size: 1.8em; /* Tamaño del logo */
     font-weight: bold;
     text-decoration: none;
@@ -46,6 +47,7 @@
 .nav-links li a {
     color: var(--color-text-light); /* Color de los enlaces */
     text-decoration: none;
+    font-family: 'Open Sans', sans-serif; /* Aplicar Open Sans a los enlaces */
     font-size: 1.1em;
     padding: 5px 0;
     transition: color 0.3s ease; /* Efecto suave al pasar el mouse */
@@ -57,7 +59,7 @@
 
 /* Estilos Generales */
 body {
-    font-family: Arial, sans-serif; /* Puedes cambiar esta fuente después */
+    font-family: 'Open Sans', sans-serif; /* FUENTE PRINCIPAL DE TEXTO */
     margin: 0;
     padding: 0;
     padding-top: 80px; /* Ajuste para que el contenido no quede debajo de la barra fija */
@@ -82,12 +84,14 @@ section {
 
 /* Estilos para títulos */
 h1 {
+    font-family: 'Montserrat', sans-serif; /* FUENTE PARA TÍTULOS GRANDES */
     font-size: 3em; /* Título grande para impacto */
     color: var(--color-text-light);
     margin-bottom: 20px;
 }
 
 h2 {
+    font-family: 'Montserrat', sans-serif; /* FUENTE PARA TÍTULOS DE SECCIÓN */
     font-size: 2.2em; /* Ligeramente más grande */
     color: var(--color-text-light);
     margin-top: 50px; /* Más espacio arriba de los títulos de sección */
@@ -95,6 +99,7 @@ h2 {
 }
 
 h3 {
+    font-family: 'Montserrat', sans-serif; /* FUENTE PARA SUBTÍTULOS */
     font-size: 1.6em; /* Títulos de subtítulos (como las misiones) */
     color: var(--color-text-light);
     margin-top: 40px; /* Espacio arriba de subtítulos */
@@ -120,6 +125,7 @@ p {
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* Aplicar Montserrat al botón */
     transition: background-color 0.3s ease; /* Efecto suave al pasar el mouse */
     margin-top: 20px; /* Espacio arriba del botón */
     margin-bottom: 20px; /* Espacio abajo del botón */
@@ -169,6 +175,7 @@ a:hover {
 .step-item h3 {
     margin-top: 0;
     font-size: 1.4em;
+    font-family: 'Montserrat', sans-serif; /* Aplicar Montserrat */
     color: var(--color-action-orange); /* Los títulos de los pasos en naranja */
 }
 
