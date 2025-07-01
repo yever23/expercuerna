@@ -63,44 +63,9 @@ body {
     margin: 0;
     padding: 0;
     padding-top: 80px; /* Ajuste para que el contenido no quede debajo de la barra fija */
-    background-color: var(--color-primary-blue); /* Fondo azul profundo, será reemplazado por imagen en header */
+    background-color: var(--color-primary-blue); /* Fondo azul profundo */
     color: var(--color-text-light); /* Texto principal blanco */
     line-height: 1.6; /* Aumentar la altura de línea para mejor legibilidad */
-}
-
-/* Estilos para el HEADER (sección principal con imagen de fondo) */
-header {
-    position: relative; /* Necesario para posicionar el overlay */
-    background-image: url('https://images.unsplash.com/photo-1549721013-057d1956f6c9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* IMAGEN DE FONDO */
-    background-size: cover; /* Cubre toda el área del header */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repite la imagen */
-    color: var(--color-text-light); /* Asegura que el texto sea blanco */
-    padding: 100px 20px; /* Más padding para que la imagen se vea bien */
-    min-height: 500px; /* Altura mínima del header */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/* Overlay oscuro sobre la imagen de fondo */
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay negro con 50% de opacidad */
-    z-index: 1; /* Para que el overlay esté sobre la imagen pero debajo del texto */
-}
-
-/* Asegurar que el contenido del header esté sobre el overlay */
-header h1, header p, header .button {
-    position: relative;
-    z-index: 2;
 }
 
 /* Contenedor principal para el contenido */
@@ -269,145 +234,96 @@ a:hover {
     transform: scale(1.05); /* Efecto de zoom ligero al pasar el mouse */
 }
 
-/* Estilos para la sección de TESTIMONIOS */
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
+/* Estilos para los items de testimonio */
 .testimonial-item {
-    background-color: rgba(255, 255, 255, 0.08); /* Fondo ligeramente más claro */
-    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.08); /* Fondo sutil para el testimonio */
+    padding: 25px;
+    margin: 20px auto; /* Centrar y dar espacio */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 600px; /* Ancho máximo para testimonios */
     text-align: center;
-    position: relative;
-    overflow: hidden; /* Para el efecto de comillas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .testimonial-item p {
-    font-style: italic; /* Las comillas serán en cursiva */
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    padding: 0; /* Asegurarse de que no tenga padding lateral del p general */
+    font-style: italic; /* Texto del testimonio en cursiva */
+    margin-bottom: 10px;
+    padding: 0; /* Quitar padding lateral para este párrafo */
 }
 
-.testimonial-item p.author {
+.testimonial-item span {
     font-weight: bold;
-    font-style: normal;
-    color: var(--color-action-orange); /* Nombre del autor en naranja */
-    font-size: 0.95em;
-    margin-top: 10px;
+    color: var(--color-secondary-green); /* Nombre del testimonial en verde */
 }
+
 
 /* Estilos para el PIE DE PÁGINA (FOOTER) */
 .footer {
-    background-color: #12203F; /* Un tono ligeramente más oscuro de azul para el footer */
+    background-color: #111B33; /* Un azul un poco más oscuro o un tono relacionado */
     color: var(--color-text-light);
     padding: 40px 20px;
-    font-family: 'Open Sans', sans-serif;
+    margin-top: 50px; /* Espacio antes del footer */
+    text-align: center;
+    font-size: 0.9em;
 }
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
-    margin-bottom: 30px;
-    text-align: left; /* Alineación del texto en las secciones del footer */
+    flex-direction: column; /* Apilar contenido en móvil por defecto */
+    gap: 20px;
 }
 
-.footer-section {
-    flex: 1; /* Permite que las secciones se expandan */
-    min-width: 250px; /* Ancho mínimo antes de que se envuelvan */
-    max-width: 30%; /* Ancho máximo para cada sección */
+.footer-content p {
+    margin: 0; /* Reiniciar márgenes de párrafos en el footer */
+    padding: 0;
+    font-size: 1em;
 }
 
-.footer-section h3 {
-    color: var(--color-action-orange); /* Títulos del footer en naranja */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4em;
+.footer-contact-info h3 {
+    color: var(--color-action-orange); /* Título de contacto en el footer */
     margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.footer-section p {
-    font-size: 0.95em;
     margin-bottom: 10px;
-    padding: 0; /* Quitar padding lateral que teníamos en párrafos generales */
-    line-height: 1.5;
+    font-size: 1.2em;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer-contact-info a {
+    color: var(--color-text-light); /* Enlaces de email/teléfono en blanco */
+    text-decoration: underline;
 }
 
-.footer-section ul li a {
-    color: var(--color-text-light); /* Enlaces del footer en blanco */
-    text-decoration: none;
-    font-size: 0.95em;
-    display: block;
-    margin-bottom: 8px;
-    transition: color 0.3s ease;
+.footer-contact-info a:hover {
+    color: var(--color-action-orange);
 }
 
-.footer-section ul li a:hover {
-    color: var(--color-secondary-green); /* Cambia a verde al pasar el mouse */
-}
-
-.footer-section .social-icons {
-    margin-top: 15px;
-    margin-bottom: 0;
-    justify-content: flex-start; /* Alinear los iconos a la izquierda en el footer */
-    gap: 15px; /* Menos espacio entre iconos en el footer */
-}
-
-.footer-section .social-icons a {
-    font-size: 1.8em; /* Un poco más pequeños en el footer */
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
-    padding-top: 20px;
+.footer .social-icons {
     margin-top: 20px;
+    margin-bottom: 0; /* Quitar margen inferior si ya está en el footer */
 }
 
-.footer-bottom p {
-    font-size: 0.85em;
-    margin: 0;
-    padding: 0;
-    color: rgba(255, 255, 255, 0.7); /* Texto de copyright más suave */
-}
 
-/* Estilos para el botón de VOLVER ARRIBA */
-.scroll-to-top-btn {
-    display: none; /* Inicialmente oculto */
+/* Estilos para el botón de "subir al inicio" */
+.scroll-to-top {
     position: fixed; /* Fijo en la pantalla */
-    bottom: 30px; /* 30px desde abajo */
-    right: 30px; /* 30px desde la derecha */
-    background-color: var(--color-action-orange); /* Naranja */
-    color: var(--color-text-light); /* Texto blanco */
-    border: none;
-    border-radius: 50%; /* Redondo */
-    width: 50px; /* Ancho y alto para que sea un círculo */
+    bottom: 20px; /* A 20px del borde inferior */
+    right: 20px; /* A 20px del borde derecho */
+    background-color: var(--color-action-orange); /* Naranja de acción */
+    color: var(--color-text-light); /* Icono blanco */
+    width: 50px;
     height: 50px;
-    font-size: 1.5em; /* Tamaño de la flecha */
-    cursor: pointer;
-    outline: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s; /* Efectos al pasar el mouse */
-    z-index: 999; /* Por encima de todo */
+    border-radius: 50%; /* Circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* Tamaño del icono de flecha */
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999; /* Por debajo de la barra de navegación, pero por encima del contenido */
 }
 
-.scroll-to-top-btn:hover {
+.scroll-to-top:hover {
     background-color: #E65A2C; /* Naranja más oscuro al pasar el mouse */
-    transform: translateY(-3px); /* Pequeño efecto de elevación */
+    transform: translateY(-3px); /* Pequeño efecto de "salto" */
 }
 
 /* Ajustes responsivos generales */
@@ -436,12 +352,6 @@ a:hover {
     section {
         padding: 30px 0;
         margin-bottom: 20px;
-    }
-
-    /* Ajustes responsivos para el header */
-    header {
-        min-height: 400px; /* Altura menor en móvil */
-        padding: 80px 20px;
     }
 
     /* Ajustes responsivos para la barra de navegación */
@@ -486,34 +396,12 @@ a:hover {
         height: 200px; /* Altura un poco menor en móvil */
     }
 
-    /* Ajustes responsivos para la sección de testimonios */
-    .testimonials-grid {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-        padding: 0 20px; /* Más padding lateral */
-    }
-
-    /* Ajustes responsivos para el footer */
+    /* Ajustes responsivos del footer */
     .footer-content {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        gap: 30px;
     }
-
-    .footer-section {
-        max-width: 100%; /* Ocupa todo el ancho en móvil */
-        min-width: unset; /* Reiniciar min-width */
-    }
-
-    .footer-section .social-icons {
-        justify-content: center; /* Centrar iconos en móvil */
-    }
-
-    /* Ajustes responsivos para el botón de volver arriba */
-    .scroll-to-top-btn {
-        bottom: 20px;
-        right: 20px;
-        width: 45px;
-        height: 45px;
-        font-size: 1.3em;
+    .footer .social-icons {
+        margin-top: 15px; /* Ajustar margen para que no se apile directamente */
     }
 }
