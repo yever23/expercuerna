@@ -234,6 +234,88 @@ a:hover {
     transform: scale(1.05); /* Efecto de zoom ligero al pasar el mouse */
 }
 
+/* Estilos para el PIE DE PÁGINA (FOOTER) */
+.footer {
+    background-color: #12203F; /* Un tono ligeramente más oscuro de azul para el footer */
+    color: var(--color-text-light);
+    padding: 40px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left; /* Alineación del texto en las secciones del footer */
+}
+
+.footer-section {
+    flex: 1; /* Permite que las secciones se expandan */
+    min-width: 250px; /* Ancho mínimo antes de que se envuelvan */
+    max-width: 30%; /* Ancho máximo para cada sección */
+}
+
+.footer-section h3 {
+    color: var(--color-action-orange); /* Títulos del footer en naranja */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    padding: 0; /* Quitar padding lateral que teníamos en párrafos generales */
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: var(--color-text-light); /* Enlaces del footer en blanco */
+    text-decoration: none;
+    font-size: 0.95em;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-secondary-green); /* Cambia a verde al pasar el mouse */
+}
+
+.footer-section .social-icons {
+    margin-top: 15px;
+    margin-bottom: 0;
+    justify-content: flex-start; /* Alinear los iconos a la izquierda en el footer */
+    gap: 15px; /* Menos espacio entre iconos en el footer */
+}
+
+.footer-section .social-icons a {
+    font-size: 1.8em; /* Un poco más pequeños en el footer */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.85em;
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.7); /* Texto de copyright más suave */
+}
+
 
 /* Ajustes responsivos generales */
 @media (max-width: 768px) {
@@ -303,5 +385,21 @@ a:hover {
     }
     .gallery-item img {
         height: 200px; /* Altura un poco menor en móvil */
+    }
+
+    /* Ajustes responsivos para el footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        max-width: 100%; /* Ocupa todo el ancho en móvil */
+        min-width: unset; /* Reiniciar min-width */
+    }
+
+    .footer-section .social-icons {
+        justify-content: center; /* Centrar iconos en móvil */
     }
 }
