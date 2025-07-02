@@ -342,44 +342,28 @@ a:hover {
     transform: translateY(-3px); /* Pequeño efecto de "salto" */
 }
 
-/* Estilos para el ELEMENTO VISUAL DEL PASAPORTE */
-.passport-card {
-    background-color: rgba(255, 255, 255, 0.1); /* Un fondo semitransparente claro */
-    border: 2px solid var(--color-secondary-green); /* Borde verde para simular un documento */
-    border-radius: 10px;
-    padding: 30px;
+/* Estilos para el VIDEO DE YOUTUBE */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 (altura / ancho = 9 / 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Ancho máximo para el video */
     margin: 50px auto; /* Centrar y dar espacio */
-    max-width: 450px; /* Ancho máximo para que no sea demasiado grande */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    background-color: #000; /* Fondo negro para evitar parpadeos */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
 }
 
-.passport-header h3 {
-    color: var(--color-action-orange); /* Título del pasaporte en naranja */
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 15px;
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-.passport-body .passport-icon {
-    font-size: 4em; /* Icono grande */
-    color: var(--color-secondary-green); /* Color del icono */
-    margin-bottom: 20px;
-}
-
-.passport-body p {
-    font-size: 1em;
-    margin-bottom: 20px;
-    padding: 0; /* Reset padding para este párrafo */
-}
-
-.passport-body .passport-id {
-    display: block; /* Para que ocupe su propia línea */
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.85em;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 15px;
-}
 
 /* Estilos para el contenido expandible de aventura */
 .adventure-details {
@@ -525,15 +509,9 @@ a:hover {
         margin-top: 15px; /* Ajustar margen para que no se apile directamente */
     }
 
-    /* Ajuste responsivo para el pasaporte */
-    .passport-card {
-        padding: 20px;
-        margin: 30px auto;
-    }
-    .passport-header h3 {
-        font-size: 1.5em;
-    }
-    .passport-body .passport-icon {
-        font-size: 3em;
+    /* Ajuste responsivo para el video */
+    .video-container {
+        margin: 30px auto; /* Ajustar margen en móvil */
+        padding: 0 20px; /* Asegurar que no se pegue a los bordes */
     }
 }
