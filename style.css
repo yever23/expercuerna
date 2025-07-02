@@ -93,6 +93,26 @@ section {
     margin-bottom: 30px; /* Espacio extra entre cada sección */
 }
 
+/* Estilo para el encabezado principal (header) - AQUÍ ESTÁ EL ENMARCADO */
+header {
+    padding: 60px 20px; /* Aumenté el padding superior e inferior */
+    border: 2px solid var(--color-action-orange); /* Borde naranja del color de acción */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 50px; /* Espacio debajo del header */
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.4); /* Sombra suave de glow */
+}
+
+
+/* Estilo para la sección "Acerca de" - AQUÍ ESTÁ EL CAMBIO DE COLOR */
+#acerca-de {
+    background-color: rgba(255, 255, 255, 0.04); /* Un fondo gris muy suave con más opacidad para diferenciar */
+    padding: 60px 0; /* Aumentar padding para que el fondo se vea bien */
+    margin-bottom: 50px; /* Espacio debajo de la sección */
+    border-radius: 10px; /* Bordes redondeados para la sección */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+
 /* Estilos para títulos */
 h1 {
     font-family: 'Montserrat', sans-serif; /* FUENTE PARA TÍTULOS GRANDES */
@@ -548,5 +568,9 @@ a:hover {
     .video-container {
         margin: 30px auto; /* Ajustar margen en móvil */
         padding: 0 20px; /* Asegurar que no se pegue a los bordes */
+    }
+    /* Ajuste responsivo para la misión VIP */
+    .mission-item-vip {
+        transform: scale(1); /* Desactivar el escalado en móvil */
     }
 }
