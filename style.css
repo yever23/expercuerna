@@ -273,7 +273,6 @@ a:hover {
     color: var(--color-secondary-green); /* Nombre del testimonial en verde */
 }
 
-
 /* Estilos para el PIE DE PÁGINA (FOOTER) */
 .footer {
     background-color: #111B33; /* Un azul un poco más oscuro o un tono relacionado */
@@ -382,8 +381,53 @@ a:hover {
     margin-top: 15px;
 }
 
+/* Estilos para el contenido expandible de aventura */
+.adventure-details {
+    display: none; /* Oculto por defecto */
+    text-align: left; /* Alineación de texto dentro del detalle */
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3); /* Línea divisoria */
+}
+
+.adventure-details.active {
+    display: block; /* Mostrar cuando está activo */
+}
+
+.adventure-details h4 {
+    color: var(--color-secondary-green); /* Color para subtítulos de los pasos */
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif; /* Usar Open Sans para sub-subtítulos */
+}
+
+.adventure-details ul {
+    list-style: none; /* Quitar viñetas por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.adventure-details ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95em;
+}
+
+.adventure-details ul li::before {
+    content: "\f00c"; /* Checkmark icon de Font Awesome */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--color-action-orange); /* Color del checkmark */
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+}
+
+
 /* Ajustes responsivos */
-@media (max-width: 768px) {
+@media (max-width: 992px) { /* CAMBIO CLAVE: Ahora los estilos móviles se activan hasta 992px de ancho */
     .menu-toggle {
         display: block; /* Mostrar el botón de la hamburguesa en móvil */
     }
@@ -424,10 +468,10 @@ a:hover {
     }
 
     h1 {
-        font-size: 1.6em; /* AÚN MÁS PEQUEÑO para pantallas móviles */
-        line-height: 1.3; /* Más espacio entre líneas */
-        letter-spacing: 0em; /* Sin ajuste negativo de espaciado entre letras */
-        padding: 0 20px; /* Añadir padding lateral al h1 para que no pegue a los bordes */
+        font-size: 1.8em; /* Tamaño de fuente para que quepa en tablets y móviles */
+        line-height: 1.4; /* Aumentar espacio entre líneas */
+        letter-spacing: 0em; /* Restablecer espaciado de letras */
+        padding: 0 20px; /* Padding lateral para que el texto no toque los bordes */
         box-sizing: border-box; /* Asegurar que el padding se incluya en el ancho */
     }
     h2 {
