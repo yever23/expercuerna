@@ -169,7 +169,42 @@ a:hover {
     margin-bottom: 30px; /* Más espacio entre cada misión/paso */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para el ::before del VIP */
 }
+
+/* Estilo para la misión VIP */
+.mission-item-vip {
+    background: linear-gradient(135deg, rgba(26, 44, 91, 0.9), rgba(42, 42, 114, 0.95)); /* Degradado más intenso */
+    border: 2px solid var(--color-action-orange); /* Borde naranja brillante */
+    box-shadow: 0 0 25px rgba(255, 107, 53, 0.5), 0 0 10px rgba(255, 107, 53, 0.2); /* Doble sombra, efecto glow */
+    transform: scale(1.02); /* Ligeramente más grande */
+    z-index: 10; /* Para que esté por encima de las otras */
+}
+
+.mission-item-vip h3 {
+    color: var(--color-action-orange); /* Título en naranja para destacar */
+    font-size: 1.8em; /* Un poco más grande para VIP */
+}
+
+/* Añadir un distintivo VIP */
+.mission-item-vip::before {
+    content: "⭐ VIP ⭐"; /* Contenido del badge */
+    position: absolute;
+    top: -15px; /* Posicionamiento fuera de la caja */
+    right: 10px;
+    background-color: var(--color-secondary-green); /* Color del badge */
+    color: var(--color-text-light);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transform: rotate(5deg); /* Pequeña rotación para llamar la atención */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
 
 /* Estilos para la cuadrícula de pasos (Cómo Funciona) */
 .steps-grid {
